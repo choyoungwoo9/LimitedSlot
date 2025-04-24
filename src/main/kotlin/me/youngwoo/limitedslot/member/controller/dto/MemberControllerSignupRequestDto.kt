@@ -3,7 +3,6 @@ package me.youngwoo.limitedslot.member.controller.dto
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Pattern
 
-
 data class MemberControllerSignupRequestDto(
     @field:NotBlank(message = "아이디는 필수 입력값입니다.")
     @field:Pattern(
