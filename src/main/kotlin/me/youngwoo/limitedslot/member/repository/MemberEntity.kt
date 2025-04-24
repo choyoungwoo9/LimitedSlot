@@ -6,7 +6,6 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 import me.youngwoo.limitedslot.member.domain.MemberDomain
 
-@Entity()
 @Entity
 @Table(name = "member")
 class MemberEntity(
