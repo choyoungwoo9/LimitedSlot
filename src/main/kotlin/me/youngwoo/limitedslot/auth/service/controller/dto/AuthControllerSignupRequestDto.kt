@@ -1,9 +1,9 @@
-package me.youngwoo.limitedslot.member.controller.dto
+package me.youngwoo.limitedslot.auth.service.controller.dto
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Pattern
 
-data class MemberControllerSignupRequestDto(
+data class AuthControllerSignupRequestDto(
     @field:NotBlank(message = "아이디는 필수 입력값입니다.")
     @field:Pattern(
         regexp = "^[a-z]{1,10}$",
