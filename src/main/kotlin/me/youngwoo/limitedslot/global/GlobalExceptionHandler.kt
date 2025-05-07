@@ -1,5 +1,6 @@
 package me.youngwoo.limitedslot.global
 
+import me.youngwoo.limitedslot.member.service.exception.IdDuplicateException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.converter.HttpMessageNotReadableException
@@ -29,5 +30,11 @@ class GlobalExceptionHandler {
                 "message" to "요청 형식 오류",
             )
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response)
+    }
+
+    @ExceptionHandler(IdDuplicateException::class)
+    fun handleIdDuplicateException(): ResponseEntity<String> {
+        val response = "ID 중복"
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(response)
     }
 }
