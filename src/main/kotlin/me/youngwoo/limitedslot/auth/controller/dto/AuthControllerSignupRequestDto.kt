@@ -1,4 +1,4 @@
-package me.youngwoo.limitedslot.auth.service.controller.dto
+package me.youngwoo.limitedslot.auth.controller.dto
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Pattern
