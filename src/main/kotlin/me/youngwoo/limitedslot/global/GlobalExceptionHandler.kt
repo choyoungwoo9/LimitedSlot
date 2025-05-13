@@ -33,8 +33,11 @@ class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(IdDuplicateException::class)
-    fun handleIdDuplicateException(): ResponseEntity<String> {
-        val response = "ID 중복"
+    fun handleIdDuplicateException(): ResponseEntity<Map<String, Any>> {
+        val response =
+            mapOf(
+                "message" to "ID 중복",
+            )
         return ResponseEntity.status(HttpStatus.CONFLICT).body(response)
     }
 }
