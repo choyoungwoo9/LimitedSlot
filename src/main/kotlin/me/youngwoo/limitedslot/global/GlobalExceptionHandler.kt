@@ -1,6 +1,6 @@
 package me.youngwoo.limitedslot.global
 
-import me.youngwoo.limitedslot.member.service.exception.IdDuplicateException
+import me.youngwoo.limitedslot.auth.service.exception.IdDuplicateException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.converter.HttpMessageNotReadableException
